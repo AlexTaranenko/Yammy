@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d3w-Iw-CKQ">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="Wfq-nL-an1">
+            <objects>
+                <viewController id="ltg-wI-wQA" customClass="SplashViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d0e-ia-eZa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ic5-9W-FhF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rHy-b6-Ztf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_color" translatesAutoresizingMaskIntoConstraints="NO" id="kGz-aG-qR3">
+                                <rect key="frame" x="100" y="180" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kGz-aG-qR3" secondAttribute="height" multiplier="1:1" id="DP2-Mv-UrJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_splash" translatesAutoresizingMaskIntoConstraints="NO" id="dx9-Th-bPp">
+                                <rect key="frame" x="120" y="430" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dx9-Th-bPp" secondAttribute="height" multiplier="8:3" id="BiN-rA-unA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ic5-9W-FhF" firstAttribute="top" secondItem="dx9-Th-bPp" secondAttribute="bottom" constant="20" id="Dtc-zp-mNs"/>
+                            <constraint firstItem="dx9-Th-bPp" firstAttribute="leading" secondItem="rHy-b6-Ztf" secondAttribute="leading" constant="120" id="Lqb-AX-0At"/>
+                            <constraint firstAttribute="trailing" secondItem="kGz-aG-qR3" secondAttribute="trailing" constant="100" id="OYS-WI-ody"/>
+                            <constraint firstAttribute="trailing" secondItem="dx9-Th-bPp" secondAttribute="trailing" constant="120" id="Uqt-Ov-VI9"/>
+                            <constraint firstItem="kGz-aG-qR3" firstAttribute="leading" secondItem="rHy-b6-Ztf" secondAttribute="leading" constant="100" id="hNo-mD-ZAA"/>
+                            <constraint firstItem="kGz-aG-qR3" firstAttribute="centerY" secondItem="rHy-b6-Ztf" secondAttribute="centerY" id="hgQ-nH-giU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cTp-Pc-mj4"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j2p-Pf-6Gg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463.125" y="123.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oYi-47-img">
+            <objects>
+                <navigationController storyboardIdentifier="SPLASH_STORYBOARD_ID" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="d3w-Iw-CKQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p07-Yl-9A2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ltg-wI-wQA" kind="relationship" relationship="rootViewController" id="cNp-uG-mYt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xTw-ga-mCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-534.375" y="123.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_color" width="150" height="150"/>
+        <image name="logo_splash" width="150" height="150"/>
+    </resources>
+</document>

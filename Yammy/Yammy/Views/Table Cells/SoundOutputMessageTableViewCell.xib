@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansDisplay Regular.ttf">
+            <string>NotoSansDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="soundOutputMessageCell" rowHeight="78" id="KGk-i7-Jjw" customClass="SoundOutputMessageTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="77.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_text_output_bg" translatesAutoresizingMaskIntoConstraints="NO" id="yEi-S1-a8G">
+                        <rect key="frame" x="105" y="22" width="240" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="IH2-EX-ddX"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4Q-h3-bHw">
+                        <rect key="frame" x="135" y="29" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="U56-Iv-oW2"/>
+                            <constraint firstAttribute="width" constant="36" id="X2P-oL-9oZ"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" image="chat_play_button"/>
+                        <state key="selected" image="chat_pause_button"/>
+                        <connections>
+                            <action selector="playDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="viX-EZ-CUB"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bBW-Ou-YDp">
+                        <rect key="frame" x="119" y="39" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="KYW-zi-xZg"/>
+                            <constraint firstAttribute="width" constant="16" id="Php-sl-JDN"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqE-bs-8sf">
+                        <rect key="frame" x="105" y="0.0" width="240" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="LvB-TK-0vC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="NotoSansDisplay-Regular" family="Noto Sans Display" pointSize="12"/>
+                        <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_text_output_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="n3w-nf-aTg">
+                        <rect key="frame" x="313" y="72" width="12" height="6"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="AzF-tL-Q5k"/>
+                            <constraint firstAttribute="height" constant="6" id="fY5-Eq-mC2"/>
+                        </constraints>
+                    </imageView>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jLa-xS-UNJ">
+                        <rect key="frame" x="171" y="46" width="160" height="2"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="P6t-Hy-sjc"/>
+                        </constraints>
+                        <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="trackTintColor" red="1" green="1" blue="1" alpha="0.14849251760563381" colorSpace="calibratedRGB"/>
+                    </progressView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TiA-Kk-UK2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09V-in-ASM">
+                                <rect key="frame" x="71" y="35" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="H20-Op-rqm"/>
+                                    <constraint firstAttribute="width" constant="24" id="TCg-ZH-cID"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="resend_message_icon"/>
+                                <connections>
+                                    <action selector="resendDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8xz-Lj-Vxt"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="not_sended_message_icon" translatesAutoresizingMaskIntoConstraints="NO" id="TxJ-93-19E">
+                                <rect key="frame" x="355" y="40" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="2qP-O9-ZrH"/>
+                                    <constraint firstAttribute="height" constant="15" id="UZ9-LT-HR9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.79724566610000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TxJ-93-19E" firstAttribute="centerY" secondItem="TiA-Kk-UK2" secondAttribute="centerY" constant="8.5" id="j6A-f6-k5h"/>
+                            <constraint firstItem="09V-in-ASM" firstAttribute="centerY" secondItem="TiA-Kk-UK2" secondAttribute="centerY" constant="8" id="sFR-o8-SO7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="n3w-nf-aTg" secondAttribute="trailing" constant="50" id="1Ed-s4-19G"/>
+                    <constraint firstItem="TiA-Kk-UK2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1Fp-DM-aXF"/>
+                    <constraint firstItem="yEi-S1-a8G" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="8.25" id="4V7-RR-Cg2"/>
+                    <constraint firstAttribute="trailing" secondItem="VqE-bs-8sf" secondAttribute="trailing" constant="30" id="6RG-0H-zxW"/>
+                    <constraint firstItem="TxJ-93-19E" firstAttribute="trailing" secondItem="yEi-S1-a8G" secondAttribute="trailing" constant="25" id="7mz-Qp-gkZ"/>
+                    <constraint firstItem="jLa-xS-UNJ" firstAttribute="trailing" secondItem="yEi-S1-a8G" secondAttribute="trailing" constant="-14" id="7z9-jB-OPK"/>
+                    <constraint firstAttribute="trailing" secondItem="yEi-S1-a8G" secondAttribute="trailing" constant="30" id="CgJ-er-N0v"/>
+                    <constraint firstItem="TiA-Kk-UK2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ct1-JV-2RX"/>
+                    <constraint firstItem="VqE-bs-8sf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="105" id="Frw-di-UIC"/>
+                    <constraint firstItem="jLa-xS-UNJ" firstAttribute="bottom" secondItem="yEi-S1-a8G" secondAttribute="bottom" constant="-24" id="HhP-u1-dSI"/>
+                    <constraint firstItem="yEi-S1-a8G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="105" id="JnQ-YZ-0Q9"/>
+                    <constraint firstItem="z4Q-h3-bHw" firstAttribute="leading" secondItem="bBW-Ou-YDp" secondAttribute="trailing" id="MB1-Pd-w6z"/>
+                    <constraint firstItem="yEi-S1-a8G" firstAttribute="leading" secondItem="09V-in-ASM" secondAttribute="leading" constant="34" id="Mbu-Uo-UCV"/>
+                    <constraint firstAttribute="bottom" secondItem="bBW-Ou-YDp" secondAttribute="bottom" constant="22.5" id="Pu7-jl-u1c"/>
+                    <constraint firstItem="jLa-xS-UNJ" firstAttribute="leading" secondItem="yEi-S1-a8G" secondAttribute="leading" constant="66" id="T9S-m5-WK1"/>
+                    <constraint firstItem="yEi-S1-a8G" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="8.25" id="U1E-cy-QCS"/>
+                    <constraint firstAttribute="trailing" secondItem="TiA-Kk-UK2" secondAttribute="trailing" id="ZpI-74-8Zn"/>
+                    <constraint firstItem="n3w-nf-aTg" firstAttribute="top" secondItem="yEi-S1-a8G" secondAttribute="bottom" id="cL9-zM-LNu"/>
+                    <constraint firstItem="yEi-S1-a8G" firstAttribute="top" secondItem="VqE-bs-8sf" secondAttribute="bottom" constant="5" id="evj-F6-xQU"/>
+                    <constraint firstItem="bBW-Ou-YDp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="119" id="kio-jD-GWB"/>
+                    <constraint firstItem="bBW-Ou-YDp" firstAttribute="top" secondItem="VqE-bs-8sf" secondAttribute="bottom" constant="22" id="p7D-Rs-lKf"/>
+                    <constraint firstAttribute="bottom" secondItem="TiA-Kk-UK2" secondAttribute="bottom" constant="-0.5" id="puC-5Z-7hn"/>
+                    <constraint firstItem="jLa-xS-UNJ" firstAttribute="top" secondItem="yEi-S1-a8G" secondAttribute="top" constant="24" id="qUg-v6-thu"/>
+                    <constraint firstItem="z4Q-h3-bHw" firstAttribute="top" secondItem="VqE-bs-8sf" secondAttribute="bottom" constant="12" id="syi-Jd-UgP"/>
+                    <constraint firstAttribute="bottom" secondItem="n3w-nf-aTg" secondAttribute="bottom" constant="-0.5" id="waJ-0A-S6z"/>
+                    <constraint firstItem="VqE-bs-8sf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xW1-9J-O0e"/>
+                    <constraint firstAttribute="bottom" secondItem="z4Q-h3-bHw" secondAttribute="bottom" constant="12.5" id="zNH-ys-KN5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="containerNotSendView" destination="TiA-Kk-UK2" id="5Sn-S1-lt6"/>
+                <outlet property="endTimeLabel" destination="VqE-bs-8sf" id="wWm-5E-g0V"/>
+                <outlet property="messageImageView" destination="yEi-S1-a8G" id="MFw-6o-fTk"/>
+                <outlet property="playButton" destination="z4Q-h3-bHw" id="omg-HY-B5A"/>
+                <outlet property="progressView" destination="jLa-xS-UNJ" id="kpL-cT-Iud"/>
+                <outlet property="statusSendImageView" destination="bBW-Ou-YDp" id="QPy-59-k1M"/>
+            </connections>
+            <point key="canvasLocation" x="-192" y="57"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chat_pause_button" width="36" height="36"/>
+        <image name="chat_play_button" width="36" height="36"/>
+        <image name="chat_text_output_arrow" width="12" height="6"/>
+        <image name="chat_text_output_bg" width="240" height="50"/>
+        <image name="not_sended_message_icon" width="24" height="24"/>
+        <image name="resend_message_icon" width="24" height="24"/>
+    </resources>
+</document>

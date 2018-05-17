@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansDisplay Bold.ttf">
+            <string>NotoSansDisplay-Bold</string>
+        </array>
+        <array key="NotoSansDisplay Regular.ttf">
+            <string>NotoSansDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChatNavTitleView">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5V-G0-PH3">
+                    <rect key="frame" x="8" y="0.0" width="244" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="zhF-va-Mzz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="NotoSansDisplay-Bold" family="Noto Sans Display" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENH-Z6-X5T">
+                    <rect key="frame" x="8" y="20" width="244" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="2Kr-o2-tJ3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="NotoSansDisplay-Regular" family="Noto Sans Display" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="D5V-G0-PH3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ABX-aO-uWe"/>
+                <constraint firstItem="D5V-G0-PH3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Pxj-Wd-AHQ"/>
+                <constraint firstItem="ENH-Z6-X5T" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Q7D-VJ-hRR"/>
+                <constraint firstItem="ENH-Z6-X5T" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="S90-aE-A5C"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="D5V-G0-PH3" secondAttribute="trailing" constant="8" id="fbD-6A-hV0"/>
+                <constraint firstItem="ENH-Z6-X5T" firstAttribute="top" secondItem="D5V-G0-PH3" secondAttribute="bottom" id="svn-JJ-XW6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ENH-Z6-X5T" secondAttribute="trailing" constant="8" id="ufB-Wa-VTI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="nameLabel" destination="D5V-G0-PH3" id="yK8-bg-dcy"/>
+                <outlet property="statusLabel" destination="ENH-Z6-X5T" id="6he-Yv-GPR"/>
+            </connections>
+        </view>
+    </objects>
+</document>

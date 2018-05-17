@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EXn-gk-Cvi">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Geo Search View Controller-->
+        <scene sceneID="5MY-vu-frj">
+            <objects>
+                <viewController id="rS1-wW-ODl" customClass="GeoSearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UBf-65-5II"/>
+                        <viewControllerLayoutGuide type="bottom" id="8gd-Xy-687"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cf1-OL-mtq">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUp-9S-brq">
+                                <rect key="frame" x="125" y="20" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2xH-4h-BG3"/>
+                                    <constraint firstAttribute="width" constant="70" id="ga2-SA-Akj"/>
+                                </constraints>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchDidTap:" destination="rS1-wW-ODl" eventType="touchUpInside" id="92u-eF-ibd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VUp-9S-brq" firstAttribute="top" secondItem="Cf1-OL-mtq" secondAttribute="top" constant="20" id="EEB-f0-KI2"/>
+                            <constraint firstItem="VUp-9S-brq" firstAttribute="centerX" secondItem="Cf1-OL-mtq" secondAttribute="centerX" id="FtB-AN-dmO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="b6y-f1-1HI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pNV-xj-5pA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1393.125" y="-211.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fLB-K8-Ali">
+            <objects>
+                <navigationController storyboardIdentifier="GEO_SEARCH_STORYBOARD_ID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="EXn-gk-Cvi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="35O-be-ueG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rS1-wW-ODl" kind="relationship" relationship="rootViewController" id="bwy-dk-YvH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iCc-TH-kgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="395.625" y="-211.25"/>
+        </scene>
+    </scenes>
+</document>

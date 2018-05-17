@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansDisplay Regular.ttf">
+            <string>NotoSansDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="soundInputMessageCell" rowHeight="78" id="KGk-i7-Jjw" customClass="SoundInputMessageTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="77.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fS0-R1-f1i">
+                        <rect key="frame" x="30" y="0.0" width="240" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="h26-sd-4O7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="NotoSansDisplay-Regular" family="Noto Sans Display" pointSize="12"/>
+                        <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_text_input_bg" translatesAutoresizingMaskIntoConstraints="NO" id="elv-Gi-yzQ">
+                        <rect key="frame" x="30" y="22" width="240" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="aQA-57-nqs"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_text_input_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="kXa-J3-fze">
+                        <rect key="frame" x="50" y="72" width="12" height="6"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="6" id="F2t-c9-Gk9"/>
+                            <constraint firstAttribute="width" constant="12" id="wZi-B2-T1z"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztf-CT-JaO">
+                        <rect key="frame" x="30" y="29" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="076-6Z-0MQ"/>
+                            <constraint firstAttribute="width" constant="36" id="2qh-Sw-K7W"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" image="chat_play_button"/>
+                        <state key="selected" image="chat_pause_button"/>
+                        <connections>
+                            <action selector="playDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zkx-tu-n8p"/>
+                        </connections>
+                    </button>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Ef-ex-JdV">
+                        <rect key="frame" x="65" y="46" width="190" height="2"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="e1E-Xr-fTt"/>
+                        </constraints>
+                        <color key="progressTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="trackTintColor" red="1" green="1" blue="1" alpha="0.14849251760000001" colorSpace="calibratedRGB"/>
+                    </progressView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="elv-Gi-yzQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="13E-xQ-qhM"/>
+                    <constraint firstItem="elv-Gi-yzQ" firstAttribute="top" secondItem="fS0-R1-f1i" secondAttribute="bottom" constant="5" id="1QG-aq-8L2"/>
+                    <constraint firstAttribute="trailing" secondItem="elv-Gi-yzQ" secondAttribute="trailing" constant="105" id="BWM-kC-voJ"/>
+                    <constraint firstItem="9Ef-ex-JdV" firstAttribute="top" secondItem="elv-Gi-yzQ" secondAttribute="top" constant="24" id="C0g-fb-M8E"/>
+                    <constraint firstItem="ztf-CT-JaO" firstAttribute="top" secondItem="elv-Gi-yzQ" secondAttribute="top" constant="7" id="Dxh-9O-WgT"/>
+                    <constraint firstAttribute="bottom" secondItem="kXa-J3-fze" secondAttribute="bottom" constant="-0.5" id="Kjh-2H-TyI"/>
+                    <constraint firstItem="fS0-R1-f1i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LaY-Gl-rJZ"/>
+                    <constraint firstItem="kXa-J3-fze" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="NMG-Bv-WUz"/>
+                    <constraint firstItem="9Ef-ex-JdV" firstAttribute="leading" secondItem="elv-Gi-yzQ" secondAttribute="leading" constant="35" id="SGA-8N-4mW"/>
+                    <constraint firstItem="9Ef-ex-JdV" firstAttribute="trailing" secondItem="elv-Gi-yzQ" secondAttribute="trailing" constant="-15" id="Yft-P5-NI1"/>
+                    <constraint firstItem="9Ef-ex-JdV" firstAttribute="bottom" secondItem="elv-Gi-yzQ" secondAttribute="bottom" constant="-24" id="foX-Ls-EEi"/>
+                    <constraint firstItem="ztf-CT-JaO" firstAttribute="leading" secondItem="elv-Gi-yzQ" secondAttribute="leading" id="hbH-g8-LHa"/>
+                    <constraint firstAttribute="trailing" secondItem="fS0-R1-f1i" secondAttribute="trailing" constant="105" id="joh-0i-YlB"/>
+                    <constraint firstItem="fS0-R1-f1i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="qI2-JS-6UL"/>
+                    <constraint firstItem="kXa-J3-fze" firstAttribute="top" secondItem="elv-Gi-yzQ" secondAttribute="bottom" id="rYW-aw-XqA"/>
+                    <constraint firstItem="ztf-CT-JaO" firstAttribute="bottom" secondItem="elv-Gi-yzQ" secondAttribute="bottom" constant="-7" id="syI-Ss-99h"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="endTimeLabel" destination="fS0-R1-f1i" id="HcX-I4-GFu"/>
+                <outlet property="messageImageView" destination="elv-Gi-yzQ" id="TKM-iw-Dpm"/>
+                <outlet property="playButton" destination="ztf-CT-JaO" id="b86-Lc-MAv"/>
+                <outlet property="progressView" destination="9Ef-ex-JdV" id="B6Z-85-dRY"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="41"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chat_pause_button" width="36" height="36"/>
+        <image name="chat_play_button" width="36" height="36"/>
+        <image name="chat_text_input_arrow" width="12" height="6"/>
+        <image name="chat_text_input_bg" width="240" height="50"/>
+    </resources>
+</document>

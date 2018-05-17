@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="k45-7g-ENZ">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hot Page View Controller-->
+        <scene sceneID="kjF-jb-mri">
+            <objects>
+                <viewController id="LXB-sV-VO1" customClass="HotPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UJN-s1-ZcL"/>
+                        <viewControllerLayoutGuide type="bottom" id="bMH-2d-5NB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cqv-o1-x3T">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ep-CL-zqQ" customClass="YSLDraggableCardContainer">
+                                <rect key="frame" x="20" y="20" width="280" height="464"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7ep-CL-zqQ" firstAttribute="leading" secondItem="Cqv-o1-x3T" secondAttribute="leading" constant="20" id="bOq-Cd-3k9"/>
+                            <constraint firstItem="7ep-CL-zqQ" firstAttribute="top" secondItem="UJN-s1-ZcL" secondAttribute="bottom" constant="20" id="fb5-Ud-Bi3"/>
+                            <constraint firstItem="bMH-2d-5NB" firstAttribute="top" secondItem="7ep-CL-zqQ" secondAttribute="bottom" constant="20" id="h4N-Ag-F24"/>
+                            <constraint firstAttribute="trailing" secondItem="7ep-CL-zqQ" secondAttribute="trailing" constant="20" id="mCX-km-PAx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="G5C-2f-BxZ"/>
+                    <connections>
+                        <outlet property="container" destination="7ep-CL-zqQ" id="P60-XK-X9g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mtd-16-fYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1550.625" y="199.64788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WHk-SP-B2p">
+            <objects>
+                <navigationController storyboardIdentifier="HOT_PAGE_STORYBOARD_ID" automaticallyAdjustsScrollViewInsets="NO" id="k45-7g-ENZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="C4W-1E-7gT">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.83921568629999999" green="0.0" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LXB-sV-VO1" kind="relationship" relationship="rootViewController" id="zy6-Vp-wjF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xue-Y6-Txs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553.125" y="200"/>
+        </scene>
+    </scenes>
+</document>

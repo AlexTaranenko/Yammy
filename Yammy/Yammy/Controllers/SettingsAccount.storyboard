@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Ur-fZ-JZE">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings Account View Controller-->
+        <scene sceneID="8xp-WS-eWz">
+            <objects>
+                <viewController id="MCs-ty-KSX" customClass="SettingsAccountViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qQe-0v-aKB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="UJj-ll-yRQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="MCs-ty-KSX" id="Tqa-Kc-qS3"/>
+                                    <outlet property="delegate" destination="MCs-ty-KSX" id="UUl-12-dGA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="UJj-ll-yRQ" firstAttribute="trailing" secondItem="mr4-LH-yku" secondAttribute="trailing" id="4Q5-QG-gfb"/>
+                            <constraint firstItem="UJj-ll-yRQ" firstAttribute="bottom" secondItem="mr4-LH-yku" secondAttribute="bottom" id="Dn7-t6-5OT"/>
+                            <constraint firstItem="UJj-ll-yRQ" firstAttribute="top" secondItem="mr4-LH-yku" secondAttribute="top" id="x46-yo-WCD"/>
+                            <constraint firstItem="UJj-ll-yRQ" firstAttribute="leading" secondItem="mr4-LH-yku" secondAttribute="leading" id="z8I-Jn-260"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mr4-LH-yku"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kah-Di-l5b"/>
+                    <connections>
+                        <outlet property="tableView" destination="UJj-ll-yRQ" id="TMn-E5-CLj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cK-sr-moE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763.125" y="201.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IIH-P9-IFN">
+            <objects>
+                <navigationController storyboardIdentifier="SETTINGS_ACCOUNT_STORYBOARD_ID" automaticallyAdjustsScrollViewInsets="NO" id="2Ur-fZ-JZE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="dJM-9d-3KT">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.83921568629999999" green="0.0" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MCs-ty-KSX" kind="relationship" relationship="rootViewController" id="hfW-FN-6dr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tb1-pv-dLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-73" y="201"/>
+        </scene>
+    </scenes>
+</document>

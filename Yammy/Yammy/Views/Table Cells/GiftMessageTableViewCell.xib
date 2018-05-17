@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansDisplay Regular.ttf">
+            <string>NotoSansDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="giftMessageCell" id="KGk-i7-Jjw" customClass="GiftMessageTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="291"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="290.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fsY-qW-hYc">
+                        <rect key="frame" x="92" y="34" width="192" height="192"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="192" id="2Ue-mK-FGX"/>
+                            <constraint firstAttribute="height" constant="192" id="elm-SG-GZc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="АЛЕКСАНДРА СДЕЛАЛА ВАМ ПОДАРОК" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnS-eX-JVA">
+                        <rect key="frame" x="30" y="0.0" width="315" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="b8q-r5-pyq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="NotoSansDisplay-Regular" family="Noto Sans Display" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBJ-Xh-OK2" customClass="CustomButton">
+                        <rect key="frame" x="62" y="247" width="252" height="44"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.0" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="HuU-Sh-1Md"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="NotoSansDisplay-Regular" family="Noto Sans Display" pointSize="14"/>
+                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="сделать подарок в ответ"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="sendGiftDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SVm-jZ-b1e"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="fsY-qW-hYc" firstAttribute="top" secondItem="qnS-eX-JVA" secondAttribute="bottom" constant="10" id="4dw-BC-tnx"/>
+                    <constraint firstItem="qnS-eX-JVA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="H5o-I6-5UO"/>
+                    <constraint firstAttribute="trailing" secondItem="fsY-qW-hYc" secondAttribute="trailing" constant="91" id="Ur3-1W-QJU"/>
+                    <constraint firstAttribute="trailing" secondItem="qnS-eX-JVA" secondAttribute="trailing" constant="30" id="dX8-aI-aGI"/>
+                    <constraint firstItem="fsY-qW-hYc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="92" id="hRM-Ks-Lvf"/>
+                    <constraint firstItem="jBJ-Xh-OK2" firstAttribute="top" secondItem="fsY-qW-hYc" secondAttribute="bottom" constant="21" id="s2g-6I-7lR"/>
+                    <constraint firstItem="qnS-eX-JVA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="smG-LJ-UOe"/>
+                    <constraint firstAttribute="bottom" secondItem="jBJ-Xh-OK2" secondAttribute="bottom" constant="-0.5" id="udb-kb-knD"/>
+                    <constraint firstItem="jBJ-Xh-OK2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="62" id="w8z-1E-Pzf"/>
+                    <constraint firstAttribute="trailing" secondItem="jBJ-Xh-OK2" secondAttribute="trailing" constant="61" id="weE-a6-gbI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="giftPhotoImageView" destination="fsY-qW-hYc" id="FlR-R2-ycm"/>
+                <outlet property="nameLabel" destination="qnS-eX-JVA" id="gnP-xZ-rje"/>
+                <outlet property="sendGiftButton" destination="jBJ-Xh-OK2" id="tOx-1n-ZKv"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

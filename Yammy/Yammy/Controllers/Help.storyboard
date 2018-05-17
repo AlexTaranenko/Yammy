@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wbP-zk-X4w">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansDisplay Regular.ttf">
+            <string>NotoSansDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Help View Controller-->
+        <scene sceneID="iaU-Dm-hCJ">
+            <objects>
+                <viewController id="PWJ-na-1eO" customClass="HelpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yoj-Fu-IWx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="v51-1Z-OXS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="zdb-on-RPk">
+                                    <rect key="frame" x="0.0" y="117.5" width="320" height="64"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i65-5k-5pL" customClass="CustomButton">
+                                            <rect key="frame" x="30" y="0.0" width="260" height="44"/>
+                                            <color key="backgroundColor" red="0.97647058819999999" green="0.0" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="mcC-db-zlO"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="NotoSansDisplay-Regular" family="Noto Sans Display" pointSize="14"/>
+                                            <state key="normal" title="Отправить сообщение администрации">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="sendAdminMessageDidTap:" destination="PWJ-na-1eO" eventType="touchUpInside" id="iR1-5S-35u"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="i65-5k-5pL" firstAttribute="top" secondItem="zdb-on-RPk" secondAttribute="top" id="EPT-Lc-42V"/>
+                                        <constraint firstAttribute="trailing" secondItem="i65-5k-5pL" secondAttribute="trailing" constant="30" id="KWa-dP-qKb"/>
+                                        <constraint firstAttribute="bottom" secondItem="i65-5k-5pL" secondAttribute="bottom" constant="20" id="YaV-Li-pah"/>
+                                        <constraint firstItem="i65-5k-5pL" firstAttribute="leading" secondItem="zdb-on-RPk" secondAttribute="leading" constant="30" id="gv9-WW-DIV"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="OQF-bp-XIU">
+                                        <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OQF-bp-XIU" id="v2E-yp-mB3">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="PWJ-na-1eO" id="EAr-GS-YMY"/>
+                                    <outlet property="delegate" destination="PWJ-na-1eO" id="shN-Vm-sp2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="v51-1Z-OXS" firstAttribute="bottom" secondItem="cPz-83-9jq" secondAttribute="bottom" id="IgE-TO-a6v"/>
+                            <constraint firstItem="v51-1Z-OXS" firstAttribute="trailing" secondItem="cPz-83-9jq" secondAttribute="trailing" id="WnA-jP-GGt"/>
+                            <constraint firstItem="v51-1Z-OXS" firstAttribute="top" secondItem="cPz-83-9jq" secondAttribute="top" id="bYf-7y-bcm"/>
+                            <constraint firstItem="v51-1Z-OXS" firstAttribute="leading" secondItem="cPz-83-9jq" secondAttribute="leading" id="ihv-fj-bD8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cPz-83-9jq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PcJ-NW-Cfz"/>
+                    <connections>
+                        <outlet property="tableView" destination="v51-1Z-OXS" id="V6Z-gg-Q3f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qj5-L4-frB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="-133.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sTi-N3-ueN">
+            <objects>
+                <navigationController storyboardIdentifier="HELP_STORYBOARD_ID" automaticallyAdjustsScrollViewInsets="NO" id="wbP-zk-X4w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Ym1-mb-CU5">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.83921568629999999" green="0.0" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PWJ-na-1eO" kind="relationship" relationship="rootViewController" id="4h7-lA-Vbx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xsb-iQ-9hf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11" y="-134"/>
+        </scene>
+    </scenes>
+</document>

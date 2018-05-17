@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansDisplay Regular.ttf">
+            <string>NotoSansDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="popupProfileFormCell" id="pKh-fI-0UC" customClass="PopupProfileFormTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pKh-fI-0UC" id="cWI-Yz-B7V">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="button_circle_bg_disabled" translatesAutoresizingMaskIntoConstraints="NO" id="YmL-xp-2DS">
+                        <rect key="frame" x="30" y="14" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="b7w-HC-SPh"/>
+                            <constraint firstAttribute="height" constant="16" id="rhM-wh-mRo"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywl-LY-4oq">
+                        <rect key="frame" x="56" y="12" width="234" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="vcG-hQ-xat"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="NotoSansDisplay-Regular" family="Noto Sans Display" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ywl-LY-4oq" firstAttribute="leading" secondItem="YmL-xp-2DS" secondAttribute="trailing" constant="10" id="0lW-2B-f0R"/>
+                    <constraint firstAttribute="trailing" secondItem="Ywl-LY-4oq" secondAttribute="trailing" constant="30" id="FeM-4n-oIe"/>
+                    <constraint firstItem="Ywl-LY-4oq" firstAttribute="top" secondItem="cWI-Yz-B7V" secondAttribute="top" constant="12" id="KyI-V6-a5j"/>
+                    <constraint firstItem="YmL-xp-2DS" firstAttribute="leading" secondItem="cWI-Yz-B7V" secondAttribute="leading" constant="30" id="RFB-qr-SA5"/>
+                    <constraint firstItem="YmL-xp-2DS" firstAttribute="centerY" secondItem="cWI-Yz-B7V" secondAttribute="centerY" id="UfT-kO-0TR"/>
+                    <constraint firstAttribute="bottom" secondItem="Ywl-LY-4oq" secondAttribute="bottom" constant="11.5" id="rBW-CS-Vov"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="iconImageView" destination="YmL-xp-2DS" id="wdh-Yo-OrJ"/>
+                <outlet property="secondTitleLabel" destination="Ywl-LY-4oq" id="NGl-6l-LkE"/>
+            </connections>
+            <point key="canvasLocation" x="-110" y="0.0"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="button_circle_bg_disabled" width="41" height="41"/>
+    </resources>
+</document>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Calibri.ttf">
+            <string>Calibri</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="orientationRegisterTableCell" id="l6h-7c-lCh" customClass="OrientationRegisterTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l6h-7c-lCh" id="A1l-oD-zeV">
+                <rect key="frame" x="0.0" y="0.0" width="260" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qKO-zC-F1l">
+                        <rect key="frame" x="8" y="11" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="mvg-xP-7PF"/>
+                            <constraint firstAttribute="width" constant="22" id="qxN-hz-IWU"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xY9-hy-JUm">
+                        <rect key="frame" x="234" y="13" width="18" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="DvN-ZH-VK1"/>
+                            <constraint firstAttribute="width" constant="18" id="cq2-X5-ABs"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faf-Hy-jvL">
+                        <rect key="frame" x="38" y="11" width="188" height="22"/>
+                        <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="17"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qKO-zC-F1l" firstAttribute="top" secondItem="A1l-oD-zeV" secondAttribute="top" constant="11" id="57G-54-taY"/>
+                    <constraint firstItem="xY9-hy-JUm" firstAttribute="leading" secondItem="faf-Hy-jvL" secondAttribute="trailing" constant="8" id="6RH-3O-fzW"/>
+                    <constraint firstAttribute="bottom" secondItem="xY9-hy-JUm" secondAttribute="bottom" constant="12.5" id="Ewm-Cs-xR9"/>
+                    <constraint firstItem="xY9-hy-JUm" firstAttribute="top" secondItem="A1l-oD-zeV" secondAttribute="top" constant="13" id="Iae-pW-yu9"/>
+                    <constraint firstAttribute="trailing" secondItem="xY9-hy-JUm" secondAttribute="trailing" constant="8" id="NQP-tH-1Vx"/>
+                    <constraint firstItem="faf-Hy-jvL" firstAttribute="leading" secondItem="qKO-zC-F1l" secondAttribute="trailing" constant="8" id="RxZ-d4-j5Y"/>
+                    <constraint firstAttribute="bottom" secondItem="qKO-zC-F1l" secondAttribute="bottom" constant="10.5" id="c4U-3X-Xu1"/>
+                    <constraint firstItem="qKO-zC-F1l" firstAttribute="leading" secondItem="A1l-oD-zeV" secondAttribute="leading" constant="8" id="goA-Cv-94b"/>
+                    <constraint firstItem="faf-Hy-jvL" firstAttribute="top" secondItem="A1l-oD-zeV" secondAttribute="top" constant="11" id="iik-EI-rDw"/>
+                    <constraint firstAttribute="bottom" secondItem="faf-Hy-jvL" secondAttribute="bottom" constant="10.5" id="vC1-cx-xkm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkboxImageView" destination="xY9-hy-JUm" id="7rc-wh-P5w"/>
+                <outlet property="nameLabel" destination="faf-Hy-jvL" id="zA8-aP-gV6"/>
+                <outlet property="orientationImageView" destination="qKO-zC-F1l" id="DIG-X7-Xt5"/>
+            </connections>
+            <point key="canvasLocation" x="-129" y="-7"/>
+        </tableViewCell>
+    </objects>
+</document>

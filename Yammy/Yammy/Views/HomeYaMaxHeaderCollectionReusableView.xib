@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansDisplay Regular.ttf">
+            <string>NotoSansDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homeYaMaxHeaderReusableView" id="U6b-Vx-4bR" customClass="HomeYaMaxHeaderCollectionReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMM-vM-4oC" customClass="CornerView">
+                    <rect key="frame" x="30" y="15" width="315" height="80"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motivation_yamax_header_icon" translatesAutoresizingMaskIntoConstraints="NO" id="AJy-dc-ntg">
+                            <rect key="frame" x="10" y="10" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="PDG-KE-7Zt"/>
+                                <constraint firstAttribute="height" constant="60" id="uPb-uO-fKK"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfI-V3-DQd">
+                            <rect key="frame" x="80" y="10" width="225" height="60"/>
+                            <string key="text">Получите бесплатно все 
+возможности с Ya Max!</string>
+                            <fontDescription key="fontDescription" name="NotoSansDisplay-Regular" family="Noto Sans Display" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.0" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="AJy-dc-ntg" firstAttribute="top" secondItem="WMM-vM-4oC" secondAttribute="top" constant="10" id="Gbk-wn-AS6"/>
+                        <constraint firstAttribute="bottom" secondItem="AJy-dc-ntg" secondAttribute="bottom" constant="10" id="QJv-zn-Mrz"/>
+                        <constraint firstAttribute="trailing" secondItem="tfI-V3-DQd" secondAttribute="trailing" constant="10" id="aH4-Qn-D3o"/>
+                        <constraint firstItem="tfI-V3-DQd" firstAttribute="top" secondItem="WMM-vM-4oC" secondAttribute="top" constant="10" id="d9U-pX-lIB"/>
+                        <constraint firstItem="tfI-V3-DQd" firstAttribute="leading" secondItem="AJy-dc-ntg" secondAttribute="trailing" constant="10" id="eH3-MB-TbM"/>
+                        <constraint firstItem="AJy-dc-ntg" firstAttribute="leading" secondItem="WMM-vM-4oC" secondAttribute="leading" constant="10" id="mBl-5G-CeR"/>
+                        <constraint firstAttribute="bottom" secondItem="tfI-V3-DQd" secondAttribute="bottom" constant="10" id="vVL-XX-Wat"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="9Gg-ye-v9C" firstAttribute="trailing" secondItem="WMM-vM-4oC" secondAttribute="trailing" constant="30" id="epn-Jt-hoi"/>
+                <constraint firstItem="WMM-vM-4oC" firstAttribute="top" secondItem="9Gg-ye-v9C" secondAttribute="top" constant="15" id="pYU-ee-udw"/>
+                <constraint firstItem="WMM-vM-4oC" firstAttribute="leading" secondItem="9Gg-ye-v9C" secondAttribute="leading" constant="30" id="vq2-9N-5Hg"/>
+                <constraint firstItem="9Gg-ye-v9C" firstAttribute="bottom" secondItem="WMM-vM-4oC" secondAttribute="bottom" constant="15" id="yiI-ZC-SaQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="9Gg-ye-v9C"/>
+            <connections>
+                <outlet property="cornerView" destination="WMM-vM-4oC" id="5gU-2f-awu"/>
+            </connections>
+            <point key="canvasLocation" x="32.5" y="84"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="motivation_yamax_header_icon" width="44" height="44"/>
+    </resources>
+</document>

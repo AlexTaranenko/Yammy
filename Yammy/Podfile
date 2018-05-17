@@ -1,0 +1,40 @@
+platform :ios, '10.0'
+#use_frameworks!
+
+inhibit_all_warnings!
+
+target 'Yammy' do
+  pod 'RestKit'
+  pod 'RBBAnimation', '0.4'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
+  pod 'STTwitter'
+  pod 'Google/SignIn'
+  pod 'VK-ios-sdk'
+  pod 'ok-ios-sdk'
+  pod 'SVProgressHUD'
+  pod 'SDWebImage'
+  pod 'WYPopoverController'
+  pod 'CCBottomRefreshControl'
+  pod 'SignalR-ObjC', '~> 2.0'
+
+pod 'Firebase/Core', '~> 4.0.0'
+pod 'Firebase/Messaging', '~> 4.0.0'
+
+pod 'TPKeyboardAvoiding'
+
+pod 'GooglePlaces'
+
+pod 'WToast'
+pod 'RealReachability'
+pod 'TOCropViewController'
+pod 'CMSwitchView'
+pod 'YandexMobileMetrica'
+end
+
+#post_install do |installer|
+#  installer.pods_project.targets.each do |target|
+#    puts "#{target.name}"
+#  end
+#end
